@@ -1,46 +1,119 @@
----
-layout: page
-description: "我干了什么 究竟拿了时间换了什么"
----
+﻿<!DOCTYPE html>
+<html>
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+	<head>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta charset="utf-8">
+		<title>界面</title>
+		<link rel="stylesheet" type="text/css" href="static/css/semantic.css">
+		<link rel="stylesheet" type="text/css" href="static/css/cust.css">
+		<!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
+		<script type="text/javascript" src="static/js/jquery.js"></script>
+		<script type="text/javascript" src="static/js/cust.js"></script>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+	</head>
+
+	<body>
+	
+		<!-- head -->
+			<div class="ui fixed inverted menu">
+				<div class="left menu">
+					<div class="inverted item">Welcome Lizicellur</div>
+				</div>
+				<div class="right menu">
+					<button class="ui disabled inverted circular button">Login</button>
+				</div>
+			</div>
+			<div class="ui grid">
+				<div class="sixteen wide column">
+				<h1 align="center" id="superhead">唯有源泉活水来</h1>
+				</div>
+			</div>
+			<div class="ui vertical basic container segment">
+			
+
+				<!-- <div class="ui image"> -->
+					<!-- <img src="static/banner.jpg" alt="image" /> -->
+				<!-- </div> -->
+			</div>
+
+<!-- content -->
+		<div class="ui grid">
+			<div class="eight wide column">
+				<div class="ui very padded container  segment">
+					<h4 class="ui header">
+					<i class="icon gittip"></i>股票
+					</h4>
+					<div class="ui item">
+						<i class="icon yen"></i>吉林高速
+						<h4 class="ui red header" id="gaoshu"></h4>
+						<div class="ui divider"></div>
+						<i class="icon yen"></i>中国联通
+						<h4 class="ui red header" id="liantong"></h4>
+						<button type="button" class="ui circular button" onclick="stock()">暮有霭</button>
+					</div>
+					
+				</div>
+			</div>
+
+		<div class="eight wide column" id="aaa">
+			<div class="ui very padded container  segment">
+					<h4 class="ui header">
+					<i class="icon money"></i>surprise
+					</h4>
+                    <i class="icon yen"></i>中国希望
+                    <h4 class="ui red header" id="gaoshu_cost">0.0</h4>
+                    		<p hidden id=gaoshu_data>4.6</p>
+                    <div class="ui divider"></div>
+                    <i class="icon yen"></i>发奋崛起
+                    <h4 class="ui red header" id="liantong_cost">0.0</h4>
+                    		<p hidden id=liantong_data>6.3</p>
+                    <button type="button" class="ui circular button" onclick="stock_ajax()">晨有光</button>
+			</div>
+		</div>
+			<!-- 矿池显示 -->
+			<div class="sixteen wide column">
+				<div class="ui very padded container segment">
+					<h4 class="ui header">
+					<i class="icon  cloud"></i>门罗币金额
+					</h4>
+
+					<div class="ui item">
+						<i class="icon bitcoin"></i>
+						中国矿池
+						<div class="ui segment" id="xmr_china">小心心</div>
+					</div>
+
+					<div class="ui divider"></div>
+
+					<div class="ui item">
+						<i class="icon bitcoin"></i>
+						国外矿池
+						<div class="ui segment" id="xmr">大心心</div>
+						
+					</div>
+					<h4 class="ui header"></h4>
+					<button type="button" name="button" class="ui button" onclick="query()">东风不来，三月柳絮不飞</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 尾部 -->
+
+		<div class="ui  inverted segment">	
+		<p>contact me</p>
+
+		</div>
+		<div style="display:hidden" id="msg">
+
+		</div>
+		<script  type="text/javascript" charset="gb2312" src="http://hq.sinajs.cn?list=sh600050"></script>
+		<script  type="text/javascript" charset="gb2312" src="http://hq.sinajs.cn?list=sh601518"></script>
+		<script type="text/javascript">
+		$("#liantong").text(hq_str_sh600050.split(",")[3])
+		$("#gaoshu").text(hq_str_sh601518.split(",")[3])
+		</script>
+
+
+	</body>
+</html>
