@@ -1,4 +1,16 @@
- 
+function high_eat(){
+var array = ["火锅","牛排","私房菜","烤鱼","烤肉","寿司","海鲜"];
+var choice=Math.floor((Math.random()*array.length));
+$("#high_price").text(array[choice]);
+// alert(array[choice])
+} 
+
+function normal_eat(){
+var array = ["面","家常菜","冒菜","曹氏鸭脖","粥","鸡公煲","吃屎"];
+var choice=Math.floor((Math.random()*array.length));
+$("#normal_price").text(array[choice]);
+// alert("aa")
+} 
 function stock(){
         // var xmlhttp_china;
         // xmlhttp_china=new XMLHttpRequest();

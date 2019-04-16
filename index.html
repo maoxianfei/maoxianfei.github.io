@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Access-Control-Allow-Origin" content="*">
 		<meta charset="utf-8">
-		<title>界面</title>
+		<title>主页</title>
 		<link rel="stylesheet" type="text/css" href="static/css/semantic.css">
 		<link rel="stylesheet" type="text/css" href="static/css/cust.css">
 		<!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
@@ -26,7 +26,7 @@
 			</div>
 			<div class="ui grid">
 				<div class="sixteen wide column">
-				<h1 align="center" id="superhead">唯有源泉活水来</h1>
+				<h1 align="center" id="superhead">吃的苦中苦 方为人上人</h1>
 				</div>
 			</div>
 			<div class="ui vertical basic container segment">
@@ -39,34 +39,35 @@
 
 <!-- content -->
 		<div class="ui grid">
-			<div class="eight wide column">
+			<div class="sixteen wide column">
 				<div class="ui very padded container  segment">
 					<h4 class="ui header">
-					<i class="icon gittip"></i>股票
+					<i class="icon gittip"></i>算命吃饭系统-一击必中请勿重试
 					</h4>
 					<div class="ui item">
-						<i class="icon yen"></i>吉林高速
-						<h4 class="ui red header" id="gaoshu"></h4>
+						<i class="icon yen"></i>平民子弟点餐
+						<h4 class="ui red header" id="normal_price">待定</h4>
+						<button type="button" class="ui circular button" onclick="normal_eat()">中等规格点餐</button>
 						<div class="ui divider"></div>
-						<i class="icon yen"></i>中国联通
-						<h4 class="ui red header" id="liantong"></h4>
-						<button type="button" class="ui circular button" onclick="stock()">暮有霭</button>
+						<i class="icon yen"></i>富家子弟点餐
+						<h4 class="ui red header" id="high_price">待定</h4>
+						<button type="button" class="ui circular button" onclick="high_eat()">高规格点餐</button>
 					</div>
 					
 				</div>
 			</div>
 
-		<div class="eight wide column" id="aaa">
+		<div class="sixteen wide column" id="aaa">
 			<div class="ui very padded container  segment">
 					<h4 class="ui header">
 					<i class="icon money"></i>surprise
 					</h4>
-                    <i class="icon yen"></i>中国希望
-                    <h4 class="ui red header" id="gaoshu_cost">0.0</h4>
+                    <i class="icon yen"></i>招商投资
+                    <h4 class="ui red header" id="gaoshu_cost"></h4>
                     		<p hidden id=gaoshu_data>4.6</p>
                     <div class="ui divider"></div>
-                    <i class="icon yen"></i>发奋崛起
-                    <h4 class="ui red header" id="liantong_cost">0.0</h4>
+                    <i class="icon yen"></i>欢迎加入
+                    <h4 class="ui red header" id="liantong_cost"></h4>
                     		<p hidden id=liantong_data>6.3</p>
                     <button type="button" class="ui circular button" onclick="stock_ajax()">晨有光</button>
 			</div>
