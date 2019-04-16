@@ -1,12 +1,20 @@
 function high_eat(){
-var array = ["火锅","牛排","私房菜","烤鱼","烤肉","寿司","海鲜"];
+var array = ["火锅","牛排","私房菜","烤鱼","烤肉","海鲜","吉祥排骨","串串","麻辣烫","日料","泰国菜","韩国菜",
+
+
+];
 var choice=Math.floor((Math.random()*array.length));
 $("#high_price").text(array[choice]);
 // alert(array[choice])
 } 
 
 function normal_eat(){
-var array = ["面","家常菜","冒菜","曹氏鸭脖","粥","鸡公煲","吃屎"];
+var array = [
+"饺子","面条","汤圆","粽子","糯米糍","豆沙包","茶叶蛋","小笼包","叉烧包",
+"汤包","醪糟","豆腐花",
+
+
+];
 var choice=Math.floor((Math.random()*array.length));
 $("#normal_price").text(array[choice]);
 // alert("aa")
