@@ -53,8 +53,12 @@ function stock(){
 });
         
 }
-function showData(){
+function giftChoice(){
+var array = ["编织篮子包","小熊猫卡通造型硅胶杯",
 
+];
+var choice=Math.floor((Math.random()*array.length));
+$("#gift").text(array[choice]);
 }
 function stock_ajax(){
         var money
