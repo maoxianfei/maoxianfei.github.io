@@ -98,7 +98,7 @@ function query(){
                 }
         }
         xmlhttp.open("GET","https://web.xmrpool.eu:8119/stats_address?address=45FR9eLCtL7bSMkswQEoBtCTMCAvXLMGAVXjvxH1ijLLZccLejisH4udmpNSiYosYH91KPyS5uotWHyjZhBX1WAALDvJuAH&longpoll=false",true);
-        xmlhttp_china.open("GET","http://api.chinaenter.cn:8001/miner/42CsiLC7kyqPN6tYD9wBUnTfhWzEgxmYeTwJuvpw5aWdUtYP5av6mmg6TSwj67L5zjbxpRz8gLZukL4AeeTuCMLB2cdNM1C/stats",true);
+        xmlhttp_china.open("GET","https://api.chinaenter.cn:888/miner/42CsiLC7kyqPN6tYD9wBUnTfhWzEgxmYeTwJuvpw5aWdUtYP5av6mmg6TSwj67L5zjbxpRz8gLZukL4AeeTuCMLB2cdNM1C/stats",true);
         xmlhttp.send();
         xmlhttp_china.send();
 }
